@@ -1,0 +1,107 @@
+<!-- view_submissions.html -->
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Submissions</title>
+    <link rel="stylesheet" href=" {% static 'home.css' %}">
+    <style>
+    
+        table {
+        
+          border-collapse: collapse;
+          margin: 20px;
+          background-color: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          margin: 20px auto;
+        }
+    
+        th, td {
+          padding: 15px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+    
+        th {
+          background-color: #3498db;
+          color: #fff;
+        }
+        h2{
+            text-align: center;
+        }
+    
+        tr:hover {
+          background-color: #f5f5f5;
+        }
+      </style>
+</head>
+<body>
+    <header>  
+        <div class="container">
+            <nav>
+                 <img src="{%static 'images/logo.jpg'%}" >
+                <ul>
+                    
+                    <li><a href="{% url 'Home' %}">Home</a></li>
+                    <li><a href="{% url 'About' %}">About</a></li>
+                
+                    <button class="btns login-btn" type="button"><a href="{%url 'form_submission'%}" >New Intern</a></button>
+                    <button class="btns login-btn" type="button"><a href="{%url 'intern-login'%}" >Intern Login</a></button>
+                
+                </ul>      
+            </nav>
+            
+        </div>
+    </header>
+    <h2>Intern Details</h2>
+    <ul>
+        
+        <table>
+            {% for i in data %}
+            <tbody>
+              <tr>
+                <td>Full Name</td>
+                <td>{{i.Full_name}}</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>{{i.Email}}</td>
+              </tr>
+              <tr>
+                <td>Phone No</td>
+                <td>{{i.Phone_No}}</td>
+              </tr>
+              <tr>
+                <td>Degree</td>
+                <td>{{i.Degree}}</td>
+              </tr>
+              <tr>
+                <td>Field of Study</td>
+                <td>{{i.Field}}</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>{{i.Address}}</td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td>{{i.City}}</td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>{{i.State}}</td>
+              </tr>
+              <tr>
+                <td>PinCode</td>
+                <td>{{i.Pincode}}</td>
+              </tr>
+            </tbody>
+          </table>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+     /* Center the background image */
+    
+}
+
+header {
+    
+    color: white;
+    padding: 10px;
+    background-color: #333;
+}
+ img{
+    
+    width: 100px;
+    height: 99px;
+    border-radius: 60px;
+    border: 2px solid gray;
+  }
+
+
+nav {
+    display: flex;
+    
+}
+
+.login-btn {
+     /* Adjust the margin to your preference */
+    justify-content: flex-end;
+    border: 2px solid #cda45e;
+    padding: 6px;
+    background-color: #cda45e;
+    border-radius: 20px;
+}
+.login-btn a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    /* Use the same styles as for "Home," "About," and "Contact" */
+    padding: 8px;  
+    border-radius: 20px;
+}
+  
+ 
+nav ul {
+    list-style-type: none;
+    margin-top: 3rem;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+li a{
+
+
+  text-decoration: none;
+  border: 2px solid #cda45e;
+  padding: 8px;
+  background-color: #cda45e;
+  color: #fff;
+  border-radius: 20px;
+}
+main {
+    padding: 20px;
+    margin-bottom: 100px; 
+    height: 100%;
+}
+main p{
+    color: brown;
+}
+.weather {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weather form {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.weather label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.weather input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.weather input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.weather input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.weather-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%; /* Use percentage-based width */
+}
+
+.weather-table th, .weather-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.weather-table th {
+    background-color: #f2f2f2;
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 80px;
+   
+    
+}
+.Contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.Contact i {
+    color: #fff !important;
+    border: 12px solid #cda45e ;
+    border-radius: 35px !important;
+    background-color: #cda45e;
+    
+  }
+  .main-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+}
+
+.login-container {
+
+    height: 250px;
+    padding-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Use max-width instead of fixed width */
+    width: 100%; /* Use percentage-based width */
+    text-align: center;
+    border: 2px aliceblue;
+    background-color: darkgray;
+
+}
+form{
+    padding:20px;
+    margin-top:20px;
+}
+
+
+.login-container input[type="email"]{
+
+    
+
+    padding: 12px 20px;
+
+    margin: 8px 0;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ccc;
+
+    border-radius: 3px;
+    opacity: 0.6;
+    width: 100%;
+}
+
+
+
+.login-container button[type="submit"] {
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    margin: 8px 0;
+
+    background-color: lightslategray;
+
+    color: black;
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 3px;
+
+}
+
+
+.login-container button[type="submit"]:hover {
+
+    background-color: #45a049;
+
+}
+
+
+.login-container p {
+
+    text-align: center;
+
+    margin-top: 10px;
+    color: ghostwhite;
+    font-size: 20px;
+}
+
+
+.login-container p a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+
+.login-container p a:hover {
+
+    text-decoration: underline;
+
+}
+
+.about p {
+    color:#333
+}

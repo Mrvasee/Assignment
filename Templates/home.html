@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>My Simple Web Page</title>
+    <link rel="stylesheet" href=" {% static 'home.css' %}">
+    
+</head>
+<body>
+    <header>
+        
+        
+        <div class="container">
+        <nav>
+             <img src="{%static 'images/logo.jpg'%}" >
+            <ul>
+                
+                <li><a href="{% url 'Home' %}">Home</a></li>
+                <li><a href="{% url 'About' %}">About</a></li>
+            
+                <button class="btns login-btn" type="button"><a href="{%url 'form_submission'%}" >New Intern</a></button>
+                <button class="btns login-btn" type="button"><a href="{%url 'intern-login'%}" >Intern Login</a></button>
+            
+            </ul>      
+        </nav>
+        
+    </div>
+    </header>
+<main>
+    
+
+    <p>Time: {{time}}</p>
+
+    <div class="weather">
+        <form action="{% url 'weather' %}" method="POST">
+            {%csrf_token%}
+            <label>Enter City:</label>
+            <input type="text" name="city" placeholder="Enter City">
+
+        </form>
+
+    </div>
+    <div class="weather-information">
+        {% if country_code %}
+            <table class="weather-table">
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td><strong>Country Code:</strong></td>
+                    <td>{{ country_code }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Coordinate:</strong></td>
+                    <td>{{ coordinate }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Temperature:</strong></td>
+                    <td>{{ temp }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Pressure:</strong></td>
+                    <td>{{ pressure }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Humidity:</strong></td>
+                    <td>{{ humidity }}</td>
+                </tr>
+            </table>
+        {% endif %}
+    </div>
+</main>
+    
+
+    <footer>
+        <div class="Contact">
+        <div class="location">
+        <i class="bi bi-geo-alt"></i>
+        <h4>Location:</h4>
+        <p>  Headquarters 
+            Ahmedabad, Gujarat 352008, IN 
+        </p>
+    </div>
+    <div class="mail">
+        <i class="bi bi-envelope"></i>
+          <h4>Email:</h4>
+          <p>restarurant@example.com</p>
+        </div>
+        <div class="phone">
+          <i class="bi bi-phone"></i>
+          <h4>Call:</h4>
+          <p>+91 1234567890</p>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
